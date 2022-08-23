@@ -11,3 +11,26 @@
 }
 
 */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+}
+
+html {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+}
+
+main {
+  background-color: white;
+  min-height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
