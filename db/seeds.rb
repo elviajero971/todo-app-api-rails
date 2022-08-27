@@ -6,6 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts 'destroy all users'
+User.destroy_all
+
+puts 'create unconfirmed user'
+User.create(email: 'user-unconfirmed@yopmail.com', password: 'Password1!', confirmed_at: nil)
+
+puts 'create confirmed user'
+User.create(email: 'user-unconfirmed@yopmail.com', password: 'Password1!', confirmed_at: DateTime.now)
+
+puts 'create admin'
+User.create(email: 'tennis-api-admin@yopmail.com', password: 'Password1!', confirmed_at: DateTime.now)
+
 puts 'destroy tennis players'
 TennisPlayer.destroy_all
 
