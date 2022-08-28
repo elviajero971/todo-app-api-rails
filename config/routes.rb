@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'user_dashboard/index', as: :dashboard
   get 'tennis_players/index'
   get 'home/index'
   root 'home#index'
